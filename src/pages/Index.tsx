@@ -73,7 +73,7 @@ const Index: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-hidden">
+    <div className="min-h-screen bg-background text-foreground">
       <FloatingShapes />
       <Navbar />
       <main>

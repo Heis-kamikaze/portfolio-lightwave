@@ -4,6 +4,7 @@ import { useScrollProgress } from "../utils/animations";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [nav, setNav] = useState(false);
   const scrollProgress = useScrollProgress();
   
   useEffect(() => {
@@ -16,8 +17,8 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300">
-      <div className={`relative mx-auto max-w-7xl ${isScrolled ? 'glassmorphism' : ''}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${isScrolled ? '' : 'backdrop-blur-lg'} ${!nav ? "px-6 py-4" : ""}`}>
+      <div className={`relative mx-auto max-w-7xl ${isScrolled ? 'glass rounded-xl' : ''}`}>
         {/* Progress indicator line */}
         <div 
           className="absolute bottom-0 left-0 h-[2px] bg-accent transition-all"
@@ -26,13 +27,13 @@ const Navbar: React.FC = () => {
         
         {/* Background blur if scrolled */}
         <div 
-          className={`absolute inset-0 backdrop-blur-lg transition-opacity duration-300 rounded-xl ${isScrolled ? 'opacity-70' : 'opacity-0'}`}
+          className={`absolute inset-0 transition-opacity duration-300 rounded-xl ${isScrolled ? 'opacity-70 backdrop-blur-lg' : 'opacity-0'}`}
         ></div>
 
         <nav className={`relative flex items-center justify-between ${isScrolled ? 'py-3 px-4' : 'py-4'} transition-all duration-300`}>
           <a href="#" className="text-xl font-semibold tracking-tight transition-all duration-300 hover:text-accent light-rays">
             <span className="relative">
-              Portfolio
+              Heis_Kamikaze
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
             </span>
           </a>
@@ -60,7 +61,8 @@ const Navbar: React.FC = () => {
             Get in touch
           </a>
           
-          <button className="md:hidden p-2">
+          <button className="md:hidden p-2"
+          onClick={() => setNav(!nav)}>
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               width="24" 
@@ -77,8 +79,34 @@ const Navbar: React.FC = () => {
               <line x1="4" x2="20" y1="18" y2="18" />
             </svg>
           </button>
+          {/* Mobile navigation */}
+          {nav && (
+            <div className="md:hidden transition-opacity absolute top-0 h-screen left-0 right-0 z-50 bg-black bg-opacity-85 shadow-lg rounded-b-xl">
+              <div className="flex items-center justify-end font-bold text-2xl p-4 text-white" onClick={() => setNav(false)}>
+                X
+              </div>
+            <ul className="flex flex-col items-center justify-evenly h-full">
+                {["Projects", "Skills", "Contact"].map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item.toLowerCase()}`}
+                      className="text-lg font-medium relative group"
+                      onClick={() => setNav(false)}
+                    >
+                      <span className="relative text-white">
+                        {item}
+                        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              </div>
+          )}
         </nav>
+
       </div>
+
     </header>
   );
 };

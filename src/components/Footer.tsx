@@ -3,12 +3,12 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-12 px-6 bg-secondary/30">
+    <footer className="py-12 px-6 bg-secondary/30 relative">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h2 className="text-2xl font-bold mb-4">Portfolio</h2>
-            <p className="text-muted-foreground max-w-md">
+            <p className="text-white max-w-md">
               A showcase of my projects, skills, and creative work as a developer and designer.
             </p>
           </div>
@@ -16,23 +16,23 @@ const Footer: React.FC = () => {
           <div className="md:text-right">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="flex flex-col md:items-end space-y-2">
-              <a href="#" className="text-muted-foreground hover:text-accent transition-colors">Home</a>
-              <a href="#projects" className="text-muted-foreground hover:text-accent transition-colors">Projects</a>
-              <a href="#skills" className="text-muted-foreground hover:text-accent transition-colors">Skills</a>
-              <a href="#contact" className="text-muted-foreground hover:text-accent transition-colors">Contact</a>
+              <a href="#" className="text-white hover:text-accent transition-colors">Home</a>
+              <a href="#projects" className="text-white hover:text-accent transition-colors">Projects</a>
+              <a href="#skills" className="text-white hover:text-accent transition-colors">Skills</a>
+              <a href="#contact" className="text-white hover:text-accent transition-colors">Contact</a>
             </div>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between">
-          <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Portfolio. All rights reserved.
+          <p className="text-sm text-white">
+            &copy; {new Date().getFullYear()} Gerrard Bernard - Portfolio. All rights reserved.
           </p>
           
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a 
               href="#" 
-              className="text-muted-foreground hover:text-accent transition-colors"
+              className="text-white hover:text-accent transition-colors"
               aria-label="GitHub"
             >
               <svg 
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
             </a>
             <a 
               href="#" 
-              className="text-muted-foreground hover:text-accent transition-colors"
+              className="text-white hover:text-accent transition-colors"
               aria-label="LinkedIn"
             >
               <svg 
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
             </a>
             <a 
               href="#" 
-              className="text-muted-foreground hover:text-accent transition-colors"
+              className="text-white hover:text-accent transition-colors"
               aria-label="Twitter"
             >
               <svg 

@@ -58,13 +58,13 @@ const Contact: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className={`staggered-fade-in ${isVisible ? 'animate' : ''}`}>
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium bg-accent/10 text-accent rounded-full">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium bg-accent/10 text-white rounded-full">
             Get In Touch
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Have a project in mind?
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mb-12">
+          <p className="text-lg text-white max-w-2xl mb-12">
             I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
           </p>
         </div>
@@ -94,8 +94,8 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-base font-medium">Email</h4>
-                  <a href="mailto:contact@example.com" className="text-muted-foreground hover:text-accent transition-colors">
-                    contact@example.com
+                  <a href="mailto:gerrardbernard09@gmail.com" className="text-white hover:text-muted-foreground transition-colors">
+                    gerrardbernard09@gmail.com
                   </a>
                 </div>
               </div>
@@ -119,8 +119,8 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-base font-medium">Phone</h4>
-                  <a href="tel:+1234567890" className="text-muted-foreground hover:text-accent transition-colors">
-                    +1 (234) 567-890
+                  <a href="tel:+2437089477224" className="text-white hover:text-muted-foreground transition-colors">
+                    +243 708 947 7224
                   </a>
                 </div>
               </div>
@@ -145,8 +145,8 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-base font-medium">Location</h4>
-                  <p className="text-muted-foreground">
-                    San Francisco, CA
+                  <p className="text-white">
+                    Lagos, Nigeria
                   </p>
                 </div>
               </div>
@@ -156,7 +156,8 @@ const Contact: React.FC = () => {
               <h3 className="text-2xl font-semibold mb-6">Connect With Me</h3>
               <div className="flex space-x-4">
                 <a 
-                  href="#" 
+                  href="https://github.com/Heis-kamikaze"
+                  target="_blank" rel="noopener noreferrer" 
                   className="bg-primary/10 p-3 rounded-lg text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
                   aria-label="GitHub"
                 >
@@ -176,7 +177,8 @@ const Contact: React.FC = () => {
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/gerrard-bernard-98761b2b0" 
+                  target="_blank" rel="noopener noreferrer"
                   className="bg-primary/10 p-3 rounded-lg text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
                   aria-label="LinkedIn"
                 >
@@ -197,7 +199,8 @@ const Contact: React.FC = () => {
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://x.com/thekamikaze_001" 
+                  target="_blank" rel="noopener noreferrer"
                   className="bg-primary/10 p-3 rounded-lg text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
                   aria-label="Twitter"
                 >

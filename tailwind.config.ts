@@ -105,9 +105,9 @@ export default {
 				},
 				'floating-shape': {
 					'0%': { transform: 'translate(0, 0) rotate(0deg)' },
-					'25%': { transform: 'translate(5px, 5px) rotate(5deg)' },
-					'50%': { transform: 'translate(0, 10px) rotate(0deg)' },
-					'75%': { transform: 'translate(-5px, 5px) rotate(-5deg)' },
+					'25%': { transform: 'translate(-105px, 35px) rotate(65deg)' },
+					'50%': { transform: 'translate(10px, 100px) rotate(30deg)' },
+					'75%': { transform: 'translate(-25px, 95px) rotate(-15deg)' },
 					'100%': { transform: 'translate(0, 0) rotate(0deg)' }
 				}
 			},
